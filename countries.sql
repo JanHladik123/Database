@@ -367,4 +367,22 @@ FROM countries
 WHERE deaths_total <= 1000 OR deaths_total >= 5000;
 
 
+SELECT *
+FROM countries
+WHERE name
+LIKE 'C%'
 
+SELECT *
+FROM countries
+WHERE name
+LIKE '%a'
+
+SELECT *
+FROM countries
+WHERE name
+LIKE '%republic%' or '%Republic%'
+
+SELECT *
+FROM countries
+WHERE name
+LIKE '%ar%' 
