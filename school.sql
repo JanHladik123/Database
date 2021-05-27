@@ -33,12 +33,6 @@ VALUES ('Karel','Nakládal','2.C','karel.nakladal@student.ossp.cz');
 CREATE TABLE teacher (
  id_teacher int AUTO_INCREMENT,
  firstname varchar(255) NOT NULL,
-
-
-ALTER TABLE teacher
-ADD FOREIGN KEY (id_teacher)
-REFERENCES teacher(id)
-ON DELETE CASCADE;
  lastname varchar(255) NOT NULL,
  description text,
  email varchar(255) NOT NULL,
@@ -49,3 +43,9 @@ INSERT INTO students (firstname,lastname,description,email)
 VALUES ('Martin','Kokeš','Database','martin.kokes@ossp.cz');
 INSERT INTO students (firstname,lastname,description,email) 
 VALUES ('Dana','Kašparová','Math','dana.kasparova@ossp.cz');
+
+
+ALTER TABLE teacher
+ADD FOREIGN KEY (id_teacher)
+REFERENCES teacher(id)
+ON DELETE CASCADE;
